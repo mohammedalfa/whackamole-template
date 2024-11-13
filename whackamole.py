@@ -15,6 +15,11 @@ def main():
                 if event.type == pygame.QUIT:
                     running = False
             screen.fill("light green")
+            for i in range(1, 20):
+                pygame.draw.line(screen, 0, (32 * i, 0), (32 * i, 512))
+            for i in range (1, 16):
+                pygame.draw.line(screen, 0, (0, 32 * i), (640, 32 * i))
+            screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
             pygame.display.flip()
             clock.tick(60)
     finally:
